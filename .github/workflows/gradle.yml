@@ -40,6 +40,12 @@ jobs:
       continue-on-error: true
       env:
          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - name: Snyk Monitor
+      run: snyk monitor
+      continue-on-error: true
+      env:
+         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      
     - name: Upload SARIF file
       uses: github/codeql-action/upload-sarif@v1
       with:
