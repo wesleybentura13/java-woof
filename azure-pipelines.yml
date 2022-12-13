@@ -1,0 +1,9 @@
+- task: SnykSecurityScan@1
+    displayName: 'Snyk Security Scan'
+    inputs:
+      serviceConnectionEndpoint: 'Snyk'
+      testType: 'app'
+      monitorWhen: 'always'
+      failOnIssues: true
+      severityThreshold: critical
+      additionalArguments: --project-tags="application=microservices" --project-environment=backend --project-lifecycle=development
