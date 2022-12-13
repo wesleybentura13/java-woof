@@ -24,3 +24,4 @@ steps:
     severityThreshold: 'low'
     monitorWhen: 'always'
     failOnIssues: false
+    additionalArguments: --project-tags="application=microservices" --project-environment=backend --project-lifecycle=development
