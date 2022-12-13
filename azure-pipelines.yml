@@ -1,8 +1,8 @@
-- task: SnykSecurityScan@1
-  inputs:
-      serviceConnectionEndpoint: 'https://api.snyk.io/api/v1/'
-      testType: 'app'
-      monitorWhen: 'always'
-      failOnIssues: true
-      severityThreshold: critical
-      additionalArguments: --project-tags="application=microservices" --project-environment=backend --project-lifecycle=development
+-  task: SnykSecurityScan@1
+   inputs:
+    serviceConnectionEndpoint: 'https://api.snyk.io/api/v1/'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
+    severityThreshold: critical
+    additionalArguments: --project-tags="application=microservices" --project-environment=backend --project-lifecycle=development
