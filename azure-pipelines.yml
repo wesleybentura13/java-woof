@@ -1,4 +1,3 @@
-
 - task: SnykSecurityScan@1
   inputs:
     serviceConnectionEndpoint: 'https://api.snyk.io/api/v1/'
