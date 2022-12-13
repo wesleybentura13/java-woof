@@ -21,6 +21,6 @@ steps:
   inputs:
     serviceConnectionEndpoint: 'https://api.snyk.io/api/v1/'
     testType: 'app'
-    severityThreshold: 'critical'
+    severityThreshold: 'low'
     monitorWhen: 'always'
     failOnIssues: false
