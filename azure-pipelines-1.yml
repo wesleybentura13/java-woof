@@ -2,7 +2,6 @@
 # Build your Java project and run tests with Gradle using a Gradle wrapper script.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
-
 trigger:
 - master
 
@@ -21,4 +20,9 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     tasks: 'build'
-
+- task: SnykSecurityScan@1
+  inputs:
+    serviceConnectionEndpoint: 'https://api.snyk.io/api/v1/'
+    testType: 'app'
+    monitorWhen: 'always'
+    failOnIssues: true
